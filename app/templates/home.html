@@ -1,1 +1,11 @@
-<h1>Home Page</h1>
+<div class="side-bar">
+  <h1 id='logo'>Chatterbox</h1>
+  <span class="test-container">
+    <button class='test-button' ng-click='Rooms.addRoom({name: "Derp Room"})'>Add Room</button>
+    <button class='test-button' ng-click='Rooms.clearRooms()'>CLEAR</button>
+  </span>
+  
+  <ul ng-repeat="(id, room) in Rooms.rooms">
+    <li> {{room.name}} </li>
+  </ul>
+</div>

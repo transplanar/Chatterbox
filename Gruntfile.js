@@ -9,7 +9,11 @@ module.exports = function(grunt) {
     grunt.initConfig({
 
         watch: {
-            hapi: {
+          options: {
+            livereload: true
+          },  
+          
+          hapi: {
                 files: [
                     './app/assets/**/*.{png,jpg,jpeg,mp3}',
                     './app/scripts/**/*.js',
