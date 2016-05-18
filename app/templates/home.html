@@ -1,1 +1,8 @@
-<h1>Home Page</h1>
+<h1>Chatterbox</h1>
+
+<button ng-click='Rooms.addRoom({name: "Derp"})'>Add Room</button>
+<button ng-click='Rooms.clearRooms()'>Clear Rooms</button>
+
+<ul ng-repeat="(id, room) in Rooms.rooms">
+  <li>{{room.name}}</li>
+</ul>
