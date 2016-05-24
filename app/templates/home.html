@@ -8,4 +8,12 @@
   <ul ng-repeat="(id, room) in Rooms.rooms">
     <li> {{room.name}} </li>
   </ul>
+  
+  <div ng-controller='ModalCtrl'>
+    <button ng-click='open()'>New Room</button>
+<!--    {{message }}-->
+    {{ roomName }}
+  </div>
+  
+
 </div>

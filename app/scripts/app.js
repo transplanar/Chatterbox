@@ -15,6 +15,6 @@
   }
   
   angular
-    .module('chatterBox', ['ui.router', 'firebase'])
+    .module('chatterBox', ['ui.bootstrap', 'ui.router', 'firebase'])
     .config(config);
 })();

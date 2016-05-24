@@ -17,9 +17,9 @@
     this.clearRooms = function(){
       RoomSrv.clearRooms();
     }
-  }
+  };
   
   angular
     .module('chatterBox')
-    .controller('RoomCtrl', ['RoomSrv', RoomCtrl]);
+    .controller('RoomCtrl', RoomCtrl);
 })();
