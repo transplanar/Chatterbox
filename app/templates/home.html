@@ -1,18 +1,18 @@
 <div class="side-bar">
   <h1 id='logo'>Chatterbox</h1>
   <span class="test-container">
-    <button class='test-button' ng-click='Rooms.addRoom({name: "Derp Room"})'>Add Room</button>
-    <button class='test-button' ng-click='Rooms.clearRooms()'>CLEAR</button>
+    <button class='test-button' ng-click='addRoom({name: "Derp Room"})'>Add Room</button>
+    <button class='test-button' ng-click='clearRooms()'>CLEAR</button>
   </span>
   
-  <ul ng-repeat="(id, room) in Rooms.rooms">
+  <ul ng-repeat="(id, room) in rooms">
     <li> {{room.name}} </li>
   </ul>
   
   <div ng-controller='ModalCtrl'>
     <button ng-click='open()'>New Room</button>
-<!--    {{message }}-->
-    {{ roomName }}
+<!--    {{ message }}-->
+<!--    {{ roomName }}-->
   </div>
   
 

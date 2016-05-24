@@ -9,7 +9,8 @@
     $stateProvider
       .state('landing',{
         url:'/',
-        controller: 'RoomCtrl as Rooms',
+//        controller: 'RoomCtrl as Rooms',
+        controller: 'RoomCtrl',
         templateUrl: '/templates/home.html'
       });
   }

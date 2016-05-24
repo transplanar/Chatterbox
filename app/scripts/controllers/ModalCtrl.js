@@ -3,27 +3,23 @@
     var size = 'sm';
     
     $scope.open = function(size){
-      console.log('open modal');
-      
       var modalInstance = $uibModal.open({
         templateUrl: 'templates/modalContent.html',
         controller: 'ModalInstanceCtrl',
         size: size
-//        resolve:
-//          {
-//            result: function(){
-//              return $scope.message;
-//            }
-//          }
       });
       
       modalInstance.result.then(
-
-        function(testVar){ $scope.message = testVar; }
-//        function(){/*on close/dismiss */}
-        //Create new room using desired room name
+        function(roomName){
+         $scope.$emit('createNewRoom', roomName); 
+        }
       );
     };
+  
+    //NOTE use submit instead?
+//    $scope.submit = function(){
+//      console.log('submit triggered');
+//    }
   }
 
   angular

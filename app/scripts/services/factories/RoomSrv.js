@@ -21,7 +21,7 @@
       rooms.$remove(id);
     }
     
-    //NOTE: FOR DEBUGGING
+    //NOTE FOR DEBUGGING
     RoomSrv.clearRooms = function(){
       firebaseRef.remove();
     }
