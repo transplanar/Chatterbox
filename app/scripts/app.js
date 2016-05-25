@@ -9,12 +9,13 @@
     $stateProvider
       .state('landing',{
         url:'/',
-        controller: 'RoomCtrl as Rooms',
+//        controller: 'RoomCtrl as Rooms',
+        controller: 'RoomCtrl',
         templateUrl: '/templates/home.html'
       });
   }
   
   angular
-    .module('chatterBox', ['ui.router', 'firebase'])
+    .module('chatterBox', ['ui.bootstrap', 'ui.router', 'firebase'])
     .config(config);
 })();

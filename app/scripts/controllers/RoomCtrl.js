@@ -1,25 +1,28 @@
 (function(){
-  function RoomCtrl(RoomSrv){
-    this.rooms = RoomSrv.getRooms();
-    
-    this.addRoom = function(room){
+  function RoomCtrl($scope, RoomSrv){
+    $scope.rooms = RoomSrv.getRooms();
+    $scope.addRoom = function(room){
       RoomSrv.addRoom(room);
     };
     
-    this.updateRoom = function(id){
+    $scope.updateRoom = function(id){
       RoomSrv.updateRoom(id);
     };
     
-    this.removeRoom = function(id){
+    $scope.removeRoom = function(id){
       RoomSrv.removeRoom(id);
     };
     
-    this.clearRooms = function(){
+    $scope.clearRooms = function(){
       RoomSrv.clearRooms();
     }
-  }
+    
+    $scope.$on('createNewRoom', function(event, args){
+      $scope.addRoom({name: args});
+    });
+  };
   
   angular
     .module('chatterBox')
-    .controller('RoomCtrl', ['RoomSrv', RoomCtrl]);
+    .controller('RoomCtrl', ['$scope', 'RoomSrv', RoomCtrl]);
 })();
