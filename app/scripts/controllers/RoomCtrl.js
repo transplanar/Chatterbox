@@ -1,6 +1,7 @@
 (function(){
   function RoomCtrl($scope, RoomSrv){
     $scope.rooms = RoomSrv.getRooms();
+    
     $scope.addRoom = function(room){
       RoomSrv.addRoom(room);
     };
@@ -13,8 +14,21 @@
       RoomSrv.removeRoom(id);
     };
     
+    $scope.getRoom = function(id){
+      RoomSrv.getRoom(id);
+    };
+    
     $scope.clearRooms = function(){
       RoomSrv.clearRooms();
+    };
+    
+    $scope.getMessages= function(id){
+      $scope.messages = RoomSrv.getMessages(id);
+//      $scope.setSelected(id);
+    };
+    
+    $scope.setSelected = function(id){
+      $scope.selectedRoom = $scope.getRoom(id);
     }
     
     $scope.$on('createNewRoom', function(event, args){

@@ -19,6 +19,12 @@
   background-color: rgba(136, 136, 136, 1.0);
 }
 
+/*.room-selected{*/
+.roomselected{
+  font-weight: bolder;
+  font-size: 1.1em;
+}
+
 .test-container{
   margin-left: 10%; margin-right: 10%;
 }
@@ -34,4 +40,17 @@
 .room-list {
   margin-top: 5%;
   margin-left: 10%;
+}
+
+.room-content{
+  margin-top: 5%;
+  margin-left: 33rem;
+}
+
+.msg-display{
+  margin-bottom: 2%;
+}
+
+.msg-username{
+  font-weight: bold;
 }

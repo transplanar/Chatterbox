@@ -6,12 +6,21 @@
   
   <span class="test-container">
     <button class="btn btn-warning" ng-click='addRoom({name: "Derp Room"})'>Add Room </br> TEST</button>
-    <button class="btn btn-warning" ng-click='clearRooms()'>Clear All </br> TEST</button>
+<!--    <button class="btn btn-warning" ng-click='clearRooms()'>Clear All </br> TEST</button>-->
   </span>
   
   <div class='room-list'>
     <ul ng-repeat="(id, room) in rooms">
-      <li> {{room.name}} </li>
+      <li ng-click='getMessages(room.$id)'> {{room.name}} </li>
+<!--      <li class='room-list-item' ng-click='getMessages(room.$id)'> {{room.name}} </li>-->
     </ul>
+  </div>
+</div>
+
+<div class='room-content'>
+  <div class='msg-display' ng-repeat='msg in messages'>
+    <span class='msg-username'>{{ msg.username }}</span> </br>
+    {{ msg.content }}
+    <hr>
   </div>
 </div>
