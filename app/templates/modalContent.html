@@ -1,13 +1,15 @@
 <div class="modal-header">
-<h3 class="modal-title">Test Modal</h3>
+<h3 class="modal-title">Create New Room</h3>
 </div>
 <div class="modal-body">
-  <form ng-submit = 'submit()'>
-    Name of Room: <input type='text' ng-model='roomName'>
+<!--  <form class='modal-prompt' ng-submit = 'submit()'>-->
+  <form ng-submit='submit()' class='modal-prompt'>
+    <span class='modal-prompt-text'>Name of Room: </br> </span>
+    <input type='text' ng-model='roomName'>
   </form>
 </div>
 <div class="modal-footer">
+<!--  <button class="btn btn-warning" type="button" ng-click="submit()">Submit</button>-->
   <button class="btn btn-warning" type="button" ng-click="submit()">Submit</button>
-<!--  <input type='submit' id = 'submit' value = 'submit' />-->
   <button class="btn btn-primary" type="button" ng-click="close()">Close</button>
 </div>

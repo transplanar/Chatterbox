@@ -1,19 +1,17 @@
 <div class="side-bar">
-  <h1 id='logo'>Chatterbox</h1>
-  <span class="test-container">
-    <button class='test-button' ng-click='addRoom({name: "Derp Room"})'>Add Room</button>
-    <button class='test-button' ng-click='clearRooms()'>CLEAR</button>
-  </span>
-  
-  <ul ng-repeat="(id, room) in rooms">
-    <li> {{room.name}} </li>
-  </ul>
-  
-  <div ng-controller='ModalCtrl'>
-    <button ng-click='open()'>New Room</button>
-<!--    {{ message }}-->
-<!--    {{ roomName }}-->
+  <div class='header' ng-controller='ModalCtrl'>
+    <h1 id='logo'>Chatterbox</h1> 
+    <button class="newRoom btn btn-info" ng-click='open()'>New Room</button>
   </div>
   
-
+  <span class="test-container">
+    <button class="btn btn-warning" ng-click='addRoom({name: "Derp Room"})'>Add Room </br> TEST</button>
+    <button class="btn btn-warning" ng-click='clearRooms()'>Clear All </br> TEST</button>
+  </span>
+  
+  <div class='room-list'>
+    <ul ng-repeat="(id, room) in rooms">
+      <li> {{room.name}} </li>
+    </ul>
+  </div>
 </div>
