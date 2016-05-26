@@ -19,6 +19,19 @@
   background-color: rgba(136, 136, 136, 1.0);
 }
 
+.test-container{
+  margin-left: 10%; margin-right: 10%;
+}
+
+.test-button{
+  display: inline-block;
+}
+
+.test-button + .test-button{
+  margin-right: 2%;
+}
+
+
 ul {
   list-style: none;
 }
@@ -35,18 +48,6 @@ li:before {
   text-shadow: 2px 2px 2px black;
 }
 
-.test-container{
-  margin-left: 10%; margin-right: 10%;
-}
-
-.test-button{
-  display: inline-block;
-}
-
-.test-button + .test-button{
-  margin-right: 2%;
-}
-
 .room-list {
   margin-top: 5%;
   margin-left: 10%;
@@ -54,11 +55,12 @@ li:before {
 
 .room-content{
   margin-top: 5%;
-  margin-left: 33rem;
+  margin-left: 34rem;
 }
 
 .msg-display{
   margin-bottom: 2%;
+  margin-left: 1rem;
 }
 
 .msg-username{

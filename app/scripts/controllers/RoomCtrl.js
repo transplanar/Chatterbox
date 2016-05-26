@@ -2,6 +2,7 @@
   function RoomCtrl($scope, RoomSrv){
     $scope.rooms = RoomSrv.getRooms();
     $scope.selectedRoom = {name: 'default'};
+    $scope.roomSelected = false;
     
     $scope.addRoom = function(room){
       RoomSrv.addRoom(room);
@@ -25,6 +26,7 @@
     
     $scope.setSelected = function(id){
       $scope.selectedRoom = RoomSrv.getRoom(id);;
+      $scope.roomSelected = true;
     }
         
     $scope.$on('createNewRoom', function(event, args){
