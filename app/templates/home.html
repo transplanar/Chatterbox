@@ -11,11 +11,8 @@
   
   <div class='room-list'>
     <ul ng-repeat="(id, room) in rooms">
-<!--      <li ng-click='getMessages(room.$id)'> {{room.name}} </li>-->
-<!--      <li ng-click='getMessages(room.$id)'> {{room.name}} </li>-->
-      <li ng-click='getMessages(room.$id); setSelected(id)'> {{room.name}} </li>
-<!--      <li ng-click='getMessages(room.$id, id)'> {{room.name}} </li>-->
-<!--      <li class='room-list-item' ng-click='getMessages(room.$id)'> {{room.name}} </li>-->
+<!--      <li ng-class='{roomSelected: room === selectedRoom}' ng-click='getMessages(room.$id); setSelected(id)'> {{room.name}} </li>-->
+      <li ng-class="{'room-selected': room === selectedRoom}" ng-click='getMessages(room.$id); setSelected(id)'> {{room.name}} </li>
     </ul>
   </div>
 </div>

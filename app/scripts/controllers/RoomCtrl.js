@@ -15,24 +15,18 @@
       RoomSrv.removeRoom(id);
     };
     
-    $scope.getRoom = function(id){
-      return RoomSrv.getRoom(id);
-    };
-    
     $scope.clearRooms = function(){
       RoomSrv.clearRooms();
     };
     
-//    $scope.getMessages= function($id, id){
     $scope.getMessages= function($id){
       $scope.messages = RoomSrv.getMessages($id);
-//      $scope.setSelected(id);
     };
     
     $scope.setSelected = function(id){
-      $scope.selectedRoom = $scope.getRoom(id);
+      $scope.selectedRoom = RoomSrv.getRoom(id);;
     }
-    
+        
     $scope.$on('createNewRoom', function(event, args){
       $scope.addRoom({name: args});
     });

@@ -19,10 +19,20 @@
   background-color: rgba(136, 136, 136, 1.0);
 }
 
-/*.room-selected{*/
-.roomselected{
+ul {
+  list-style: none;
+}
+
+li:before {
+  content: '\2022';
+  padding: 10px;
+}
+
+.room-selected{
   font-weight: bolder;
-  font-size: 1.1em;
+  font-size: 1.2em;
+  color: white;
+  text-shadow: 2px 2px 2px black;
 }
 
 .test-container{
