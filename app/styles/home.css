@@ -31,7 +31,38 @@
   margin-right: 2%;
 }
 
+
+ul {
+  list-style: none;
+}
+
+li:before {
+  content: '\2022';
+  padding: 10px;
+}
+
+.room-selected{
+  font-weight: bolder;
+  font-size: 1.2em;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
 .room-list {
   margin-top: 5%;
   margin-left: 10%;
+}
+
+.room-content{
+  margin-top: 5%;
+  margin-left: 34rem;
+}
+
+.msg-display{
+  margin-bottom: 2%;
+  margin-left: 1rem;
+}
+
+.msg-username{
+  font-weight: bold;
 }

@@ -9,6 +9,10 @@
       return rooms;
     };
     
+    RoomSrv.getRoom = function(id){
+      return rooms[id];
+    }
+    
     RoomSrv.addRoom = function(room){
       rooms.$add(room);
     }
@@ -21,6 +25,12 @@
       rooms.$remove(id);
     }
     
+    RoomSrv.getMessages = function(id){
+      return $firebaseArray(firebaseRef.child('messages')
+                                       .orderByChild('roomID')
+                                       .equalTo(id));
+    }
+        
     //NOTE FOR DEBUGGING
     RoomSrv.clearRooms = function(){
       firebaseRef.remove();
