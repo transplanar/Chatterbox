@@ -10,8 +10,7 @@
     };
     
     RoomSrv.getRoom = function(id){
-      console.log('get room with key',id,rooms)
-      return rooms.$getRecord(id);
+      return rooms[id];
     }
     
     RoomSrv.addRoom = function(room){

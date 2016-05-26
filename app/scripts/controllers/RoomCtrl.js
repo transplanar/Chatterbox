@@ -1,6 +1,7 @@
 (function(){
   function RoomCtrl($scope, RoomSrv){
     $scope.rooms = RoomSrv.getRooms();
+    $scope.selectedRoom = {name: 'default'};
     
     $scope.addRoom = function(room){
       RoomSrv.addRoom(room);
@@ -15,15 +16,16 @@
     };
     
     $scope.getRoom = function(id){
-      RoomSrv.getRoom(id);
+      return RoomSrv.getRoom(id);
     };
     
     $scope.clearRooms = function(){
       RoomSrv.clearRooms();
     };
     
-    $scope.getMessages= function(id){
-      $scope.messages = RoomSrv.getMessages(id);
+//    $scope.getMessages= function($id, id){
+    $scope.getMessages= function($id){
+      $scope.messages = RoomSrv.getMessages($id);
 //      $scope.setSelected(id);
     };
     

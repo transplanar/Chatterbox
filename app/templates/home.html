@@ -11,13 +11,18 @@
   
   <div class='room-list'>
     <ul ng-repeat="(id, room) in rooms">
-      <li ng-click='getMessages(room.$id)'> {{room.name}} </li>
+<!--      <li ng-click='getMessages(room.$id)'> {{room.name}} </li>-->
+<!--      <li ng-click='getMessages(room.$id)'> {{room.name}} </li>-->
+      <li ng-click='getMessages(room.$id); setSelected(id)'> {{room.name}} </li>
+<!--      <li ng-click='getMessages(room.$id, id)'> {{room.name}} </li>-->
 <!--      <li class='room-list-item' ng-click='getMessages(room.$id)'> {{room.name}} </li>-->
     </ul>
   </div>
 </div>
 
 <div class='room-content'>
+  selected = {{ selectedRoom.name }}
+  
   <div class='msg-display' ng-repeat='msg in messages'>
     <span class='msg-username'>{{ msg.username }}</span> </br>
     {{ msg.content }}
