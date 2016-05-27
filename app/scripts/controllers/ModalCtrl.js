@@ -4,12 +4,13 @@
     
     $scope.open = function(size){
       var modalInstance = $uibModal.open({
-        templateUrl: 'templates/modalContent.html',
+        templateUrl: 'templates/modals/newRoomModal.html',
         controller: 'ModalInstanceCtrl',
         size: size,
         windowClass: 'modal-window'
       });
       
+      //NOTE is this correct?
       modalInstance.result.then(
         function(roomName){
          $scope.$emit('createNewRoom', roomName); 
