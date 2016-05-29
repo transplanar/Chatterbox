@@ -1,5 +1,7 @@
 (function(){
-  function RoomCtrl($scope, RoomSrv){
+  //NOTE $window used for testing. Restore original for live version.
+//  function RoomCtrl($scope, RoomSrv){
+  function RoomCtrl($scope, RoomSrv, $cookies, $window){
     $scope.rooms = RoomSrv.getRooms();
     $scope.selectedRoom = {name: 'default'};
     $scope.roomSelected = false;
@@ -32,9 +34,17 @@
     $scope.$on('createNewRoom', function(event, args){
       $scope.addRoom({name: args});
     });
+    
+    //NOTE For debugging
+    $scope.clearCookies = function(){
+      $cookies.remove('currentUser');
+      $window.location.reload();
+    }
   };
   
   angular
     .module('chatterBox')
-    .controller('RoomCtrl', ['$scope', 'RoomSrv', RoomCtrl]);
+  //NOTE $window used for testing. Restore original for live version.
+//    .controller('RoomCtrl', ['$scope', 'RoomSrv', RoomCtrl]);
+    .controller('RoomCtrl', ['$scope', 'RoomSrv', '$cookies', '$window', RoomCtrl]);
 })();

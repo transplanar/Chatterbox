@@ -35,7 +35,7 @@
     RoomSrv.clearRooms = function(){
       firebaseRef.remove();
     }
-    
+        
     return RoomSrv;
   }
 

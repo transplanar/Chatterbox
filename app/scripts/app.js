@@ -12,9 +12,9 @@
         controller: 'RoomCtrl',
         templateUrl: '/templates/home.html'
       });
-  }
+  };
   
   angular
-    .module('chatterBox', ['ui.bootstrap', 'ui.router', 'firebase'])
-    .config(config);
+    .module('chatterBox', ['ui.bootstrap', 'ui.router', 'firebase', 'ngCookies'])
+    .config(config)
 })();
