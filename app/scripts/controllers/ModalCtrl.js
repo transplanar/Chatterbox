@@ -13,7 +13,7 @@
       //NOTE is this correct?
       modalInstance.result.then(
         function(roomName){
-         $scope.$emit('createNewRoom', roomName); 
+         $scope.$emit('createNewRoom', roomName);
         }
       );
     };
@@ -21,5 +21,5 @@
 
   angular
     .module('chatterBox')
-    .controller('ModalCtrl', ['$scope', '$log', '$uibModal', ModalCtrl]);
+    .controller('ModalCtrl', ['$scope', '$uibModal', ModalCtrl]);
 })();
