@@ -66,3 +66,14 @@ li:before {
 .msg-username{
   font-weight: bold;
 }
+
+.messageInput{
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  margin-left: 34rem;
+}
+
+.messageInputbox{
+  width: 87%;
+  display: inline-block;
+}

@@ -15,6 +15,7 @@
   };
   
   angular
-    .module('chatterBox', ['ui.bootstrap', 'ui.router', 'firebase', 'ngCookies'])
+//    .module('chatterBox', ['ui.bootstrap', 'ui.router', 'firebase', 'ngCookies'])
+    .module('chatterBox', ['ui.bootstrap', 'ui.router', 'firebase', 'formatTime', 'ngCookies'])
     .config(config)
 })();

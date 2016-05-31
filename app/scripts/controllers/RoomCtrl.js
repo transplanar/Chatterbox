@@ -2,9 +2,11 @@
   //NOTE $window used for testing. Restore original for live version.
 //  function RoomCtrl($scope, RoomSrv){
   function RoomCtrl($scope, RoomSrv, $cookies, $window){
-    $scope.rooms = RoomSrv.getRooms();
+    $scope.rooms = RoomSrv.getAllRooms();
     $scope.selectedRoom = {name: 'default'};
     $scope.roomSelected = false;
+    
+    $scope.messageContent = '';
     
     $scope.addRoom = function(room){
       RoomSrv.addRoom(room);
@@ -30,7 +32,7 @@
       $scope.selectedRoom = RoomSrv.getRoom(id);;
       $scope.roomSelected = true;
     }
-        
+    
     $scope.$on('createNewRoom', function(event, args){
       $scope.addRoom({name: args});
     });
