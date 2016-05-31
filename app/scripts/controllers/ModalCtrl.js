@@ -1,5 +1,5 @@
 (function(){
-  function ModalCtrl($scope, $log, $uibModal){
+  function ModalCtrl($scope, $uibModal){
     var size = 'sm';
     
     $scope.open = function(size){
