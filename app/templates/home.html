@@ -19,8 +19,15 @@
 <div class='room-content'>
   <h1 ng-show='roomSelected' class='selected-room-header'>{{ selectedRoom.name }}</h1>
   <div class='msg-display' ng-repeat='msg in messages'>
-    <span class='msg-username'>{{ msg.username }}</span> </br>
+    <span class='msg-username'>{{ msg.username }} </span> </br>
     {{ msg.content }}
+    {{ msg.sentAt }}
     <hr>
   </div>
 </div>
+
+
+<form ng-submit='send()' ng-show='roomSelected' class='messageInput' ng-controller= 'MessageCtrl'>
+  <input class='messageInputbox' type='text' ng-model='messageContent'>
+  <button class='btn btn-info' type='button' ng-click='send()'>Send</button>
+</form>

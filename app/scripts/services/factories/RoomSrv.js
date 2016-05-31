@@ -5,7 +5,7 @@
     var firebaseRef = new Firebase("https://incandescent-heat-1344.firebaseio.com/");
     var rooms = $firebaseArray(firebaseRef.child('rooms'));
     
-    RoomSrv.getRooms = function(){
+    RoomSrv.getAllRooms = function(){
       return rooms;
     };
     
