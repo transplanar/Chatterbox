@@ -37,7 +37,6 @@
       $scope.addRoom({name: args});
     });
     
-    //NOTE For debugging
     $scope.clearCookies = function(){
       $cookies.remove('currentUser');
       $window.location.reload();

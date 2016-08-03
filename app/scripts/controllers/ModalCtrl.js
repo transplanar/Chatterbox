@@ -10,7 +10,6 @@
         windowClass: 'modal-window'
       });
       
-      //NOTE is this correct?
       modalInstance.result.then(
         function(roomName){
          $scope.$emit('createNewRoom', roomName);
