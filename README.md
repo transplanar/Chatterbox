@@ -14,7 +14,7 @@ On your first visit, you will be prompted to give a username. Once entered, you 
 Click the ```New Room``` button to create a new room. You will be prompted to provide a name for the room. You will then be redirected to the room you just created. From here, you can **Write a message**.
 
 #### Writing Messages
-Input the message you would like to send into the input box at the bottom of the screen then hit enter or press ``Send``` to post it to your current chat room.
+Input the message you would like to send into the input box at the bottom of the screen then hit enter or press `Send` to post it to your current chat room.
 
 ### Visit Existing Rooms
 You may visit rooms created by other users and **Write Messages** in them as well.
